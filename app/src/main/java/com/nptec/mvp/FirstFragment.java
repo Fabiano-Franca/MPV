@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
@@ -20,6 +21,7 @@ public class FirstFragment extends Fragment {
 
     HalfGauge halfGaugeTemp;
     HalfGauge halfGaugePh;
+    CardView cardViewEstatistica;
 
     @Override
     public View onCreateView(
@@ -32,14 +34,6 @@ public class FirstFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
-            }
-        });
 
         inicializaComponentes(view);
         Map<String, Double> valores = new HashMap<>();
@@ -61,11 +55,20 @@ public class FirstFragment extends Fragment {
         valores.put("valueInitial", 150.0);
         configuraGauge(halfGaugePh, valores);
 
+        cardViewEstatistica.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragment.this)
+                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+            }
+        });
+
     }
 
     private void inicializaComponentes(@NonNull View view) {
         halfGaugeTemp = view.findViewById(R.id.halfGauge_temp);
         halfGaugePh = view.findViewById(R.id.halfGauge_ph);
+        cardViewEstatistica = view.findViewById(R.id.carView_estatistica);
     }
 
     private void configuraGauge(HalfGauge v, Map<String, Double> valores) {
