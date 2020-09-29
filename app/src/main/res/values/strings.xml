@@ -1,10 +1,19 @@
 <resources>
-    <string name="app_name">MVP</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">MVP NPTec</string>
+    <string name="action_settings">Configuração</string>
     <!-- Strings used for fragments for navigation -->
     <string name="temperatura_fragment_label">Temperatura</string>
     <string name="ph_fragment_label">Ph</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Entrar</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Bem-vindo!"</string>
+    <string name="invalid_username">Email inválido</string>
+    <string name="invalid_password">O password deve ser >5 characters</string>
+    <string name="login_failed">"Login falhou"</string>
 
 </resources>

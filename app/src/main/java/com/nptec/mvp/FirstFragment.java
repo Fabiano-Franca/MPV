@@ -8,12 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
-
 import com.ekn.gruzer.gaugelibrary.HalfGauge;
 import com.ekn.gruzer.gaugelibrary.Range;
 import com.nptec.mvp.com.nptec.mvp.dao.Utils;
@@ -216,7 +214,7 @@ public class FirstFragment extends Fragment {
 
             Sensores sensores = new Utils().extraiSensor(resposta.toString());
             //Sensores sensores = new Gson().fromJson(resposta.toString(), Sensores.class);
-            Log.i("Resposta:", sensores.toString());
+            //Log.i("Resposta:", sensores.toString());
 
             //List<Sensores> produtos = new Gson().fromJson(resposta.toString(), new TypeToken<List<Sensores>>(){}.getType());
 

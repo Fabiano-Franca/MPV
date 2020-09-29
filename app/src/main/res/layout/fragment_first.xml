@@ -2,8 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:elevation="8dp"
     tools:context="com.nptec.mvp.MainActivity">
 
     <ScrollView
@@ -19,7 +21,10 @@
                 android:id="@+id/cardView_temp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardMaxElevation="8dp"
+                >
 
                 <com.ekn.gruzer.gaugelibrary.HalfGauge
                     android:id="@+id/halfGauge_temp"
@@ -40,7 +45,10 @@
                 android:id="@+id/cardView_ph"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardMaxElevation="8dp"
+                >
 
                 <TextView
                     android:id="@+id/textView_ph"
@@ -61,7 +69,10 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardMaxElevation="8dp"
+                >
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
